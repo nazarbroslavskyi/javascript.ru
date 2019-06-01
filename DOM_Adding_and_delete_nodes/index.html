@@ -19,21 +19,45 @@
   </style>
 </head>
 <body>
-<table id="table">
-  <tr>
-    <td>Это</td>
-    <td>Все</td>
-    <td>Элементы DOM</td>
-  </tr>
-</table>
-  
-<ol id="ol">
-  <li>Вася</li>
-  <li>Петя</li>
-  <li>Маша</li>
-  <li>Даша</li>
-</ol>
+<p id="container">
+     <ul id="list">
+     <li>Животные
+       <ul class="he">
+         <li>Млекопитающие
+           <ul>
+             <li>Коровы</li>
+             <li>Ослы</li>
+             <li>Собаки</li>
+             <li>Тигры</li>
+           </ul>
+         </li>
+         <li>Другие
+           <ul>
+             <li>Змеи</li>
+             <li>Птицы</li>
+             <li>Ящерицы</li>
+           </ul>
+         </li>
+       </ul>
+     </li>
+     <li>Рыбы
+       <ul>
+         <li>Аквариумные
+           <ul>
+             <li>Гуппи</li>
+             <li>Скалярии</li>
+           </ul>
+         </li>
+         <li>Морские
+           <ul>
+             <li>Морская форель</li>
+           </ul>
+         </li>
+       </ul>
+     </li>
+   </ul>
+   </p>
 
-<script src="./createList.js"></script>
+<script src="./list.js"></script>
 </body>
 </html>

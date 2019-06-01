@@ -67,9 +67,9 @@ function tree(list) {
 
 		// console.log();
 		if(list.children[i].getElementsByTagName("ul").length) {
-			console.log(list.children[i].getElementsByTagName("li").length);
+			list.children[i].getElementsByTagName("li").length;
 			let newel = document.createTextNode(`[${list.children[i].getElementsByTagName("li").length}]`);
-			console.log(list.children[i].insertBefore(newel, list.children[i].firstChild.nextSibling))
+			list.children[i].insertBefore(newel, list.children[i].firstChild.nextSibling);
 
 			tree(list.children[i].children[0]);
 		}
