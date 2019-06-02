@@ -1,0 +1,160 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+
+    .alert {
+      padding: 15px;
+      border: 1px solid #d6e9c6;
+      border-radius: 4px;
+      color: #3c763d;
+      background-color: #dff0d8;
+    }
+    
+  </style>
+</head>
+<body>
+
+    <!-- <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+
+    <div id="text">Текст</div> -->
+  <!-- <div class="menu">
+    <p class="button"><span class="triangle"></span>Sweets Press Me</p>
+    <div class="sweets">
+      <p>pie</p>
+      <p>donut</p>
+      <p>cake</p>
+    </div>
+  </div> -->
+
+
+  <!-- Кнопка для удаления: -->
+  <!-- <button class="remove-button">[x]</button> -->
+
+  <!-- <div>
+    <div class="pane">
+      <h3>Лошадь</h3>
+      <p>Домашняя лошадь — животное семейства непарнокопытных, одомашненный и единственный сохранившийся подвид дикой лошади, вымершей в дикой природе, за исключением небольшой популяции лошади Пржевальского.</p>
+      <button class="remove-button rm-button">[x]</button>
+
+    </div>
+    <div class="pane">
+      <h3>Осёл</h3>
+      <p>Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший важную историческую роль в развитии хозяйства и культуры человека. Все одомашненные ослы относятся к африканским ослам.</p>
+      <button class="remove-button rm-button">[x]</button>
+      
+    </div>
+    <div class="pane">
+      <h3>Корова, а также пара слов о диком быке, о волах и о тёлках. </h3>
+      <p>Коро́ва — самка домашнего быка, одомашненного подвида дикого быка, парнокопытного жвачного животного семейства полорогих. Самцы вида называются быками, молодняк — телятами, кастрированные самцы — волами. Молодых (до первой стельности) самок называют
+        тёлками.
+      </p>
+      <button class="remove-button rm-button">[x]</button>
+
+    </div>
+  </div> -->
+
+
+
+<!-- карусель -->
+
+
+
+
+
+
+<!-- карусель -->
+
+
+<!-- <script src="./hide_when_click.js"></script>
+</body>
+</html> --> 
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ваша верстка виджета, ваши стили -->
+
+  <button class="arrow">⇦</button>
+  <button class="arrow">⇨</button>
+<div class="cont">
+    <button class="arrow left-btn">⇦</button>
+
+    <div class="container">
+
+        <ul>
+            <li><img src="https://js.cx/carousel/1.png"></li>
+            <li><img src="https://js.cx/carousel/2.png"></li>
+            <li><img src="https://js.cx/carousel/3.png"></li>
+            <li><img src="https://js.cx/carousel/4.png"></li>
+            <li><img src="https://js.cx/carousel/5.png"></li>
+            <li><img src="https://js.cx/carousel/6.png"></li>
+            <li><img src="https://js.cx/carousel/7.png"></li>
+            <li><img src="https://js.cx/carousel/8.png"></li>
+            <li><img src="https://js.cx/carousel/9.png"></li>
+            <li><img src="https://js.cx/carousel/10.png"></li>
+          </ul>
+  
+    </div>
+  <button class="arrow right-btn">⇨</button>
+
+</div>
+ 
+ 
+
+
+  <script>
+    // этот код помечает картинки цифрами, для удобства разработки
+    // его можно убрать, если не нужен
+    // var lis = document.getElementsByTagName('li');
+    // for (var i = 0; i < lis.length; i++) {
+    //   lis[i].style.position = 'relative';
+    //   var span = document.createElement('span');
+    //   span.style.cssText = 'position:absolute;left:0;top:0';
+    //   span.innerHTML = i + 1;
+    //   lis[i].appendChild(span);
+    // }
+
+let margin = 0;
+const rightButton = document.querySelector(".right-btn");
+const leftButton = document.querySelector(".left-btn");
+
+function eventRight() {
+  if(margin > -780) {
+    margin = margin  - 390;
+    console.log(margin);
+  } else if(margin == -780) {
+    margin = margin  - 130;
+  }
+
+	document.querySelector(".container ul").style.marginLeft = margin + "px";
+}
+
+function eventLeft() {
+  if(margin < -130) {
+    margin = margin  + 390;
+    console.log(margin);
+
+  } else if(margin == - 130) {
+    margin = margin + 130;
+  }
+	document.querySelector(".container ul").style.marginLeft = margin + "px";
+}
+
+
+rightButton.addEventListener("click", eventRight);
+leftButton.addEventListener("click", eventLeft);
+  </script>
+</body>
+
+</html>
